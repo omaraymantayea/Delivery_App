@@ -1,0 +1,43 @@
+name: delivery_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  
+  # 🔥 مكتبات الفايربيز الأساسية وقاعدة البيانات
+  firebase_core: ^3.1.1
+  firebase_auth: ^5.1.1
+  firebase_database: ^11.1.1
+  cloud_firestore: ^5.4.4       # ☁️ ضفناها علشان الـ active_drivers
+  google_sign_in: ^6.2.1
+  flutter_map: ^6.1.0  # 🗺️ باقة الخرائط المجانية البديلة
+  latlong2: ^0.9.1     # 🧭 للتعامل مع الإحداثيات (Latitude & Longitude)
+  # 🗺️ مكتبات اللوكيشن والخرائط (مكانها الصح هنا)
+  geolocator: ^14.0.2
+  location: ^7.0.1              # 📡 ضفناها علشان الـ Location() اللي في الكود
+  google_maps_flutter: ^2.11.0  # 🧭 اتنقلت هنا علشان التطبيق يشوفها
+  url_launcher: ^6.3.1          # 💬 اتنقلت هنا علشان زرار الواتساب يشتغل
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.jpeg"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/

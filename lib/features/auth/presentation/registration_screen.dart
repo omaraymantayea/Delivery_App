@@ -48,7 +48,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     if (!mounted) return;
 
     Widget nextScreen = const SizedBox.shrink();
-    // 🎯 التعديل هنا: تم تعديل الكلاس لـ CustomerHomeScreen
     if (role == 'customer') nextScreen = const CustomerHomeScreen();
     if (role == 'driver') nextScreen = const DriverHome();
     if (role == 'admin') nextScreen = const AdminHome();

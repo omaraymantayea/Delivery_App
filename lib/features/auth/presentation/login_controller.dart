@@ -12,15 +12,13 @@ class LoginController extends ChangeNotifier {
     notifyListeners();
   }
 
-  // تسجيل دخول بالإيميل
   Future<void> loginWithEmail(
       String email, String password, BuildContext context) async {
     _setLoading(true);
     try {
       final user = await _authService.signInWithEmail(email, password);
       if (user != null && context.mounted) {
-        Navigator.pushReplacementNamed(
-            context, '/'); // التوجه لشاشة الاختيار مؤقتاً
+        Navigator.pushReplacementNamed(context, '/');
       }
     } catch (e) {
       if (context.mounted) {
@@ -32,7 +30,6 @@ class LoginController extends ChangeNotifier {
     }
   }
 
-  // تسجيل دخول بجوجل
   Future<void> loginWithGoogle(BuildContext context) async {
     _setLoading(true);
     try {
